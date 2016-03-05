@@ -4,9 +4,7 @@ On February 28, 2016, the comedian John Oliver called upon viewers of Last Week 
 
 A Web Archives Hackathon at the University of Toronto happened to coincide with this Drumpfing of Trump. Drumpf famously declared "I love words. I have the best words." We set off on a set a hands-on inquiries into what investigating Twitter through not just words but words _and_ images might look like: what people say, how they make/re-make images words, how computers classify images. 
 
-## Workflows
-
-Researching Meme Events
+## Researching Meme Events
 
 The toolkit in #iknowwordsandimages emerged out of response to this still unfolding meme event, drawing on a data set of tweets and associated images connected by the hashtag Oliver had put forward, #makedonalddrumpfagain. The team assumed researchers in a variety of fields would find much to study in this meme event and others like it. Here are some of the questions we thought researchers might ask:
 
@@ -16,7 +14,7 @@ The toolkit in #iknowwordsandimages emerged out of response to this still unfold
 
 - How do Twitter users' uses of text appear to affect the success or failure of an image’s propagation?
 
-Sample Workflow
+## Sample Workflow
 
 Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow. Here is a sample workflow.
 
