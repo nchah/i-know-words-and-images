@@ -14,7 +14,7 @@ The toolkit in #iknowwordsandimages emerged out of response to this still unfold
 
 - Do people alter the way they introduce or label the images that they share through their tweet text? If so, in what ways and for what reasons?
 
-- How does the use of the tweet appear to affect the success or failure of an image’s propagation through Twitter?
+- How do Twitter users' uses of text appear to affect the success or failure of an image’s propagation?
 
 Sample Workflow
 
