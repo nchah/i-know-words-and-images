@@ -6,7 +6,7 @@ A Web Archives Hackathon at the University of Toronto happened to coincide with 
 
 ## Researching Meme Events
 
-The toolkit in #iknowwordsandimages emerged out of response to this still unfolding meme event, drawing on a data set of tweets and associated images connected by the hashtag Oliver had put forward, #makedonalddrumpfagain. The team assumed researchers in a variety of fields would find much to study in this meme event and others like it. Here are some of the questions we thought researchers might ask:
+The toolkit in #iknowwordsandimages emerged out of response to this still unfolding meme event—a social experiment and #politicalintervention by a comedy show. We drew on a data set of tweets and associated images connected by the hashtag that Oliver had put forward, #MakeDonaldDrumpfAgain. The team assumed researchers in a variety of fields would find much to study in this meme event and others like it. Here are some of the questions we thought researchers might ask:
 
 - How did John Oliver’s original broadcast influence the kinds of themes that meme participants pursued in their contributions?
 
@@ -14,15 +14,17 @@ The toolkit in #iknowwordsandimages emerged out of response to this still unfold
 
 - How do Twitter users' uses of text appear to affect the success or failure of an image’s propagation?
 
-## Sample Workflow
+Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow.
 
-Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow. Here is a sample workflow.
+## Sample Uses cases
+
+1.  Examining a sub-set.
 
 (a) Researcher examines database of images, either manually through OS or with the aid of script for returning images by frequency.
 
-(b) A specific theme emerges across different images: for example, the various ways of comparing Donald Trump to Hitler.
+(b) A subset of images become interesting. Maybe a specific theme emerges across different images: for example, the various ways of comparing Donald Trump to Hitler.
 
-(c) The researcher gathers unique Image IDs related to the theme. Because of the way Twitter identifies and links to images, its important to check if additional copies of the image appear under different file names.
+(c) The researcher gathers a set of unique Image IDs. Because of the way Twitter identifies and links to images, its important to check if additional copies of the image appear under different file names.
 
 (d) Researcher uses ImageHash and PhotoHash to find similar images in the database. This process also returns the hamming distance. Results that return 0 are identical copies of the same image. Results above 0 have variation, so might need to be inspected. 
 
@@ -34,6 +36,7 @@ Researches could try to get at these questions through browsing Twitter, or thro
 
 (h) Now you have options! Do ImagePlot mapped by time and similarity. Use Google Cloud Vision API to add further metadata to CSV (see below). Run other analytics on the set. Or bravely go forth and scan the data on your own!
 
+2. Whatever research path you're following, you might want to also do an analysis of the whole set, which might be very large. The Google Cloud Vision API can return two datasets of interest: the text in the image (e.g., Make Donald Drumpf Again) and the entities in the image (e.g., hands, hat, hair, businessman, money). Researcher can look for patterns in these data. One possibility is comparing the words, themes, and images that John Oliver presents in the original broadcast with those that appeared during the meme event.
 
 ## Google Cloud Vision API
 
