@@ -18,7 +18,7 @@ Researches could try to get at these questions through browsing Twitter, or thro
 
 ## Sample Use Cases
 
-1.  Examining a sub-set.
+###Examining a sub-set.
 
 (a) Researcher examines database of images, either manually through OS or with the aid of script for returning images by frequency.
 
@@ -36,7 +36,9 @@ Researches could try to get at these questions through browsing Twitter, or thro
 
 (h) Now you have options! Do ImagePlot mapped by time and similarity. Use Google Cloud Vision API to add further metadata to CSV (see below). Run other analytics on the set. Or bravely go forth and scan the data on your own!
 
-2. Whatever research path you're following, you might want to also do an analysis of the whole set, which might be very large. The Google Cloud Vision API can return two datasets of interest: the text in the image (e.g., Make Donald Drumpf Again) and the entities in the image (e.g., hands, hat, hair, businessman, money). Researcher can look for patterns in these data. One possibility is comparing the words, themes, and images that John Oliver presents in the original broadcast with those that appeared during the meme event.
+###Analysis at scale.
+
+Whatever research path you're following, you might want to also do an analysis of the whole set, which might be very large. The Google Cloud Vision API can return two datasets of interest: the text in the image (e.g., Make Donald Drumpf Again) and the entities in the image (e.g., hands, hat, hair, businessman, money). Researcher can look for patterns in these data. One possibility is comparing the words, themes, and images that John Oliver presents in the original broadcast with those that appeared during the meme event.
 
 ## Google Cloud Vision API
 
