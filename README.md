@@ -20,13 +20,11 @@ Workflows
 
 Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow. Here is an example workflow.
 
-1. Common Theme
-
 (a) Researcher examines database of images, either manually through OS or with the aid of script for returning images by frequency.
 
 (b) A specific theme emerges across different images: for example, the various ways of comparing Donald Trump to Hitler.
 
-(c) The researcher gathers unique Image IDs. Because of the way Twitter identifies and links to images, its important to check if additional copies of the image appear under different file names.
+(c) The researcher gathers unique Image IDs related to the theme. Because of the way Twitter identifies and links to images, its important to check if additional copies of the image appear under different file names.
 
 (d) Researcher uses ImageHash and PhotoHash to find similar images in the database. This process also returns the hamming distance. Results that return 0 are identical copies of the same image. Results above 0 have variation, so might need to be inspected. 
 
