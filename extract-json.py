@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+"""
+Extracts JSON fields and outputs a csv
+"""
+
+__author__ = "NC"
 
 import argparse
 import json

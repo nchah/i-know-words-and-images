@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+"""
+Uses the Google Cloud Vision API, currently in beta as of March 2016.
+"""
+
+__author__ = "NC"
 
 import argparse
 import base64
