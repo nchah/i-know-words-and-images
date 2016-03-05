@@ -5,6 +5,7 @@ Uses the Google Cloud Vision API, currently in beta as of March 2016.
 
 import argparse
 import base64
+import csv
 import httplib2
 import datetime
 import json
@@ -16,29 +17,45 @@ __author__ = "NC"
 
 # Globals
 timestamp = str(datetime.datetime.now())
-storage_file_name = timestamp + "-vision-api-output.json"
+json_file_name = timestamp + "-vision-api-output.json"
+csv_file_name = timestamp + "-vision-api-output.csv"
+
+# Initialize csv
+with open(csv_file_name, 'a') as csvfile:
+    csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    csv_writer.writerow(['image_name', 'labels', 'texts'])
 
 
 def process_images(image_input):
     image_exts = ['.jpg', 'jpeg', '.png']
     ignore_files = ['.DS_Store']
 
-    if not os.path.isdir(image_input):
-        print(image_input)
-        main(image_input)
-    else:
+    # Check if folder
+    if image_input[-1] == "/":
         dir_name = image_input
-        for fn in os.listdir(dir_name + '/'):
+        for fn in os.listdir(dir_name):
             ext = os.path.splitext(fn)
             if fn not in ignore_files and ext[1] in image_exts and not os.path.isdir(fn):
                 print(fn)
-                main(dir_name + '/' + fn)
+                main(dir_name + fn)
+    else:
+        print(image_input)
+        main(image_input)
 
 
 def store_json(json_input):
-    with open(storage_file_name, "a") as f:
+    with open(json_file_name, "a") as f:
         f.write(json_input)
         f.write('\n')
+
+
+def store_csv(csv_input):
+    with open(csv_file_name, 'a') as csvfile:
+        csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        try:
+            csv_writer.writerow(csv_input)
+        except UnicodeEncodeError:  # TODO: handle unicode OR just run with Python 3 :)
+            csv_writer.writerow(["ERROR"])
 
 
 def main(photo_file):
@@ -73,12 +90,18 @@ def main(photo_file):
                 })
     response = service_request.execute()
 
+    # Prepare parsing of responses into relevant fields
+    query = photo_file
+    all_labels = ''
+    all_text = ''
+
     try:
         labels = response['responses'][0]['labelAnnotations']
         for label in labels:
             # label = response['responses'][0]['labelAnnotations'][0]['description']
             label = label['description']
             print('Found label: %s' % label)
+            all_labels += label + ', '
     except KeyError:
         print("N/A labels found")
 
@@ -90,14 +113,18 @@ def main(photo_file):
             # text = response['responses'][0]['textAnnotations'][0]['description']
             text = text['description']
             print('Found text: %s' % text)
+            all_text += text + ', '
     except KeyError:
         print("N/A text found")
 
     print('\n= = = = = Image Processed = = = = =\n')
 
+    csv_response = [query, all_labels, all_text]
+
     response["query"] = photo_file
     response = json.dumps(response, indent=3)
     store_json(response)
+    store_csv(csv_response)
 
     return 0
 

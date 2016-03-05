@@ -19,8 +19,8 @@ def main(input_file):
 
     # Writer headers
     with open(timestamp + "_" + input_file.split(".")[0] + '_extracted.csv', 'a') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        spamwriter.writerow(['user_id', 'user_name', 'user_startdate', 'user_description', 'user_location',
+        csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        csv_writer.writerow(['user_id', 'user_name', 'user_startdate', 'user_description', 'user_location',
                                      'tweet_id', 'tweet_text', 'tweet_date', 'retweet_count', 'source'])
 
     for j in json_data:
@@ -40,12 +40,12 @@ def main(input_file):
         user_id = j['user']['screen_name']
 
         with open(timestamp + "_" + input_file.split(".")[0] + '_extracted.csv', 'a') as csvfile:
-            spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             try:
-                spamwriter.writerow([user_id, user_name, user_start, user_desc, user_loc,
+                csv_writer.writerow([user_id, user_name, user_start, user_desc, user_loc,
                                      id, text, date, retweet_count, source])
             except UnicodeEncodeError:  # TODO: handle unicode OR just run with Python 3 :)
-                spamwriter.writerow(["ERROR"])
+                csv_writer.writerow(["ERROR"])
 
 
 if __name__ == '__main__':
