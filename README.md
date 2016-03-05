@@ -16,9 +16,9 @@ The toolkit in #iknowwordsandimages emerged out of response to this still unfold
 
 - How does the use of the tweet appear to affect the success or failure of an image’s propagation through Twitter?
 
-Workflows
+Sample Workflow
 
-Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow. Here is an example workflow.
+Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow. Here is a sample workflow.
 
 (a) Researcher examines database of images, either manually through OS or with the aid of script for returning images by frequency.
 
