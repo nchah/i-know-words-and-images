@@ -2,7 +2,7 @@
 
 On February 28, 2016, the comedian John Oliver called upon viewers of Last Week Tonight to undermine Republican presidential primary candidate Donald Trump’s veneer of success, honesty, and affluence through the powers and peculiarities of social media: let the world know that Trump is not Trump but _Drumpf_, a man of failures, dishonesty, and violent chauvinism. A flood of social media activity followed: meme, word, image, hashtag, comment, retweet. 
 
-A Web Archives Hackathon at the University of Toronto happened to coincide with this Drumpfing of Trump. Drumpf famously declared "I love words. I have the best words." We set off on a hands-on inquiry into what investigating Twitter through not just words but words _and_ images might look like: what people say, how they make/re-make images words, how computers classify images, and so on. 
+A Web Archives Hackathon at the University of Toronto happened to coincide with this Drumpfing of Trump. Drumpf famously declared "I love words. I have the best words." We set off on a hands-on inquiry into what investigating Twitter through not just words but words _and_ images might look like: what people say, how they use/modify each other's images and words, how computers read text and classify images, and so on. 
 
 ## Researching Meme Events
 
