@@ -1,6 +1,6 @@
 # i-know-words-and-images
 
-On February 28, 2016, the comedian John Oliver called upon viewers of Last Week Tonight to undermine Republican presidential primary candidate Donald Trump’s veneer of success, honesty, and affluence through the powers and peculiarities of social media: let the world know that Trump is not Trump but _Drumpf_, a man of failures, dishonesty, and violent chauvinism. A flood of social media activity followed: meme, word, image, hashtag, comment, retweet. 
+On February 28, 2016, the comedian John Oliver called upon viewers of Last Week Tonight (https://youtu.be/DnpO_RTSNmQ) to undermine Republican presidential primary candidate Donald Trump’s veneer of success, honesty, and affluence through the powers and peculiarities of social media: let the world know that Trump is not Trump but _Drumpf_, a man of failures, dishonesty, and violent chauvinism. A flood of social media activity followed: meme, word, image, hashtag, comment, retweet. 
 
 A Web Archives Hackathon at the University of Toronto happened to coincide with this Drumpfing of Trump. Drumpf famously declared "I love words. I have the best words." We set off on a hands-on inquiry into what investigating Twitter through not just words but words _and_ images might look like: what people say, how they use/modify each other's images and words, how computers read text and classify images, and so on. 
 
@@ -43,16 +43,19 @@ Whatever research path you're following, you might want to also do an analysis o
 
 ## Samples
 
+another imageplot starting with the 4th most tweeted image, then comparing similarity with out sample of ~1000
 ![Similarity](results/meme_imageplot.txt---tweetid-vs-similarity.gif "Similarity")
 
-another imageplot starting with the 4th most tweeted image, then comparing similarity with out sample of ~1000
-
+did a test plot of tweetid (time?) along x axis by similarity (y-axis) for the podium set. top image was the one constantly retweeted.
 ![Similarity](results/podium_imageplot.txt---tweet_id-vs-similarity.gif "Similarity")
 
-did a test plot of tweetid (time?) along x axis by similarity (y-axis) for the podium set. top image was the one constantly retweeted.
-
+Transcript Wordcloud
 ![Transcript Wordcloud](results/transcript.png "Transcript Wordcloud")
+
+Labels Wordcloud (from Vision API)
 ![Labels Wordcloud](results/visionapi-labels.png "Labels Wordcloud")
+
+OCR Wordcloud (from Vision API)
 ![OCR Wordcloud](results/visionapi-ocr.png "OCR Wordcloud")
 
 
