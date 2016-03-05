@@ -14,7 +14,7 @@ The toolkit in #iknowwordsandimages emerged out of response to this still unfold
 
 - How do Twitter users' uses of text appear to affect the success or failure of an image’s propagation?
 
-Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow.
+Researchers could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow.
 
 ## Sample Use Cases
 
@@ -38,7 +38,7 @@ Researches could try to get at these questions through browsing Twitter, or thro
 
 ###Analysis at scale.
 
-Whatever research path you're following, you might want to also do an analysis of the whole set, which might be very large. The Google Cloud Vision API can return two datasets of interest: the text in the image (e.g., Make Donald Drumpf Again) and the entities in the image (e.g., hands, hat, hair, businessman, money). Researcher can look for patterns in these data. One possibility is comparing the words, themes, and images that John Oliver presents in the original broadcast with those that appeared during the meme event.
+Whatever research path you're following, you might want to also do an analysis of the whole set, which might be very large. The Google Cloud Vision API can return two datasets of interest: the text in the image (e.g., Make Donald Drumpf Again) and the entities in the image (e.g., hands, hat, hair, businessman, money). Researchers can look for patterns in these data. One possibility is comparing the words, themes, and images that John Oliver presents in the original broadcast with those that appeared during the meme event. How much apparent influence does the original "seeding" of the meme event have?
 
 ## Google Cloud Vision API
 
