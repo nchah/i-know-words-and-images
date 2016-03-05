@@ -2,8 +2,43 @@
 
 ## Workflow
 
+On February 28, 2016, the comedian John Oliver called upon viewers of Last Week Tonight to undermine Republican presidential primary candidate Donald Trump’s veneer of success, honesty, and affluence through the powers and peculiarities of social media: let the world know that Trump is not Trump but _Drumpf_, a man of failures, dishonesty, and violent chauvinism. A flood of social media activity followed: meme, word, image, hashtag, comment, retweet. 
 
+Researching Meme Events
 
+The toolkit in #iknowwordsandimages emerged out of response to this still unfolding meme event, drawing on a data set of tweets and associated images connected by the hashtag Oliver had put forward, #makedonalddrumpfagain. The team assumed researchers in a variety of fields would find much to study in this meme event and others like it. Here are some of the questions we thought researchers might ask:
+
+- How did John Oliver’s original broadcast influence the kinds of themes that meme participants pursued in their contributions?
+
+- Do people alter the way they introduce or label the images that they share through their tweet text? If so, in what ways and for what reasons?
+
+- How does the use of the tweet appear to affect the success or failure of an image’s propagation through Twitter?
+
+Workflows
+
+Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and lack of extensive coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow. Here are two workflows we contemplated.
+
+1. Common Theme
+
+(a) Researcher examines database of images, either manually through OS or with the aid of script for returning images by frequency.
+
+(b) A specific theme emerges across different images: for example, the various ways of comparing Donald Trump to Hitler.
+
+(c) The researcher gathers unique Image IDs.
+
+(d) Researcher can do a couple things at this stage: using ImageHash and PhotoHash, find similar images in the database. This process also returns the hamming distance. 
+
+(e) Do analysis on images and add to list those of similarity at a researcher-determined level of confidence.
+
+(f) Get the all Tweet IDs associated with images. 
+
+(g) Hydrate for full JSON Twitter metadata (see below).
+
+(g) Extract selected parameters into CSV, e.g., "text", "date", "retweet number", "ID", "source", and "description."
+
+(f) Now you have options! Do ImagePlot mapped by time and similarity. Use Google Cloud Vision API to add further metadata to CSV. 
+
+(h) Run other analytics on the set.
 
 
 ## Google Cloud Vision API
