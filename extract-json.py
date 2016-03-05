@@ -17,6 +17,12 @@ def main(input_file):
     with open(input_file, "r") as f:
         json_data = f.readlines()
 
+    # Writer headers
+    with open(timestamp + "_" + input_file.split(".")[0] + '_extracted.csv', 'a') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        spamwriter.writerow(['user_id', 'user_name', 'user_startdate', 'user_description', 'user_location',
+                                     'tweet_id', 'tweet_text', 'tweet_date', 'retweet_count', 'source'])
+
     for j in json_data:
         # Extract ID, text, date, retweet_count, source
 
@@ -27,11 +33,17 @@ def main(input_file):
         date = j['created_at']
         retweet_count = str(j['retweet_count'])
         source = j['source']
+        user_name = j['user']['name']
+        user_start = j['user']['created_at']
+        user_desc = j['user']['description']
+        user_loc = j['user']['location']
+        user_id = j['user']['screen_name']
 
         with open(timestamp + "_" + input_file.split(".")[0] + '_extracted.csv', 'a') as csvfile:
             spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             try:
-                spamwriter.writerow([id, text, date, retweet_count, source])
+                spamwriter.writerow([user_id, user_name, user_start, user_desc, user_loc,
+                                     id, text, date, retweet_count, source])
             except UnicodeEncodeError:  # TODO: handle unicode OR just run with Python 3 :)
                 spamwriter.writerow(["ERROR"])
 
