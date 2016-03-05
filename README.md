@@ -16,7 +16,7 @@ The toolkit in #iknowwordsandimages emerged out of response to this still unfold
 
 Workflows
 
-Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and lack of extensive coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow. Here are two workflows we contemplated.
+Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and lack of extensive coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow. Here is an example workflow.
 
 1. Common Theme
 
