@@ -18,7 +18,7 @@ Researchers could try to get at these questions through browsing Twitter, or thr
 
 ## Sample Use Cases
 
-###Examining a sub-set.
+###Examining a subset.
 
 (a) Researcher examines database of images, either manually through OS or with the aid of script for returning images by frequency.
 
