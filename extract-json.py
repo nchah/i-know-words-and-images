@@ -3,12 +3,12 @@
 Extracts JSON fields and outputs a csv
 """
 
-__author__ = "NC"
-
 import argparse
 import json
 import csv
 import datetime
+
+__author__ = "NC"
 
 timestamp = str(datetime.datetime.now())
 

@@ -3,8 +3,6 @@
 Uses the Google Cloud Vision API, currently in beta as of March 2016.
 """
 
-__author__ = "NC"
-
 import argparse
 import base64
 import httplib2
@@ -14,19 +12,21 @@ import os
 from apiclient.discovery import build
 from oauth2client.client import GoogleCredentials
 
+__author__ = "NC"
+
 # Globals
 timestamp = str(datetime.datetime.now())
 storage_file_name = timestamp + "-vision-api-output.json"
 
 
-def process_images():
+def process_images(dir_name):
     image_exts = ['.jpg', 'jpeg', '.png']
     ignore_files = ['.DS_Store']
-    for fn in os.listdir('images/'):
+    for fn in os.listdir(dir_name + '/'):
         ext = os.path.splitext(fn)
-        if fn not in ignore_files or ext[1] in image_exts:
+        if fn not in ignore_files and ext[1] in image_exts and not os.path.isdir(fn):
             print(fn)
-            main("images/" + fn)
+            main(dir_name + '/' + fn)
 
 
 def store_json(json_input):
@@ -103,4 +103,8 @@ def main(photo_file):
 
 if __name__ == '__main__':
     """ for batch processing of images in folder, otherwise use main()"""
-    process_images()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('dir_name', help='The folder containing images you\'d like to query')
+    args = parser.parse_args()
+    process_images(args.dir_name)
+

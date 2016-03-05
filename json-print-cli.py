@@ -3,10 +3,11 @@
 Wanted a script to pretty print JSON to the command line.
 
 """
-__author__ = "NC"
 
 import argparse
 import json
+
+__author__ = "NC"
 
 
 def main(input_file):
