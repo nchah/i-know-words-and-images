@@ -1,5 +1,8 @@
 __author__ = 'EM'
 
+"""
+Apply after looking at Donald Drumpf images too long.
+"""
 
 def cleanse():
     import webbrowser
