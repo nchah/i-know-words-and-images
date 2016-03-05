@@ -3,7 +3,7 @@ __author__ = 'EM'
 
 """
 Assumes format of text file for input of image urls and tweet ids is each line as:
-704918662784880645 http://pbs.twimg.com/media/CchfyO4XIAA-fEZ.jpg
+700000000000000000 http://pbs.twimg.com/media/Ccccccccccccccc.jpg
 """
 
 f = open('MakeDonaldDrumpfAgain-image-urls-with-ids.txt', 'r')
