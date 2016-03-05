@@ -80,11 +80,11 @@ def main(photo_file):
                         },
                         'features': [{
                             'type': 'LABEL_DETECTION',
-                            'maxResults': 10,
+                            'maxResults': 20,
                         },
                             {
                             'type': 'TEXT_DETECTION',
-                            'maxResults': 10,
+                            'maxResults': 20,
                             }]
                     }]
                 })
@@ -102,7 +102,7 @@ def main(photo_file):
             label_val = label['description']
             score = str(label['score'])
             print('Found label: "%s" with score %s' % (label_val, score))
-            all_labels += label_val + ' @ ' + score + ', '
+            all_labels += label_val.encode('utf-8') + ' @ ' + score + ', '
     except KeyError:
         print("N/A labels found")
 
@@ -115,15 +115,15 @@ def main(photo_file):
             text_val = text['description']
             score = str(text['score'])
             print('Found text: "%s" with score %s' % (text_val, score))
-            all_text += text_val + ' @ ' + score + ', '
+            all_text += text_val.encode('utf-8') + ' @ ' + score + ', '
     except KeyError:
         print("N/A text found")
 
     print('\n= = = = = Image Processed = = = = =\n')
 
+    response["query"] = photo_file
     csv_response = [query, all_labels, all_text]
 
-    response["query"] = photo_file
     response = json.dumps(response, indent=3)
     store_json(response)
     store_csv(csv_response)

@@ -21,7 +21,7 @@ def main(input_file):
     with open(timestamp + "_" + input_file.split(".")[0] + '_extracted.csv', 'a') as csvfile:
         csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         csv_writer.writerow(['user_id', 'user_name', 'user_startdate', 'user_description', 'user_location',
-                                     'tweet_id', 'tweet_text', 'tweet_date', 'retweet_count', 'source'])
+                                     'tweet_id', 'tweet_text', 'tweet_date', 'image_url', 'retweet_count', 'source'])
 
     for j in json_data:
         # Extract ID, text, date, retweet_count, source
@@ -38,12 +38,13 @@ def main(input_file):
         user_desc = j['user']['description']
         user_loc = j['user']['location']
         user_id = j['user']['screen_name']
+        image_url = j['entities']['media'][0]['media_url']
 
         with open(timestamp + "_" + input_file.split(".")[0] + '_extracted.csv', 'a') as csvfile:
             csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             try:
                 csv_writer.writerow([user_id, user_name, user_start, user_desc, user_loc,
-                                     id, text, date, retweet_count, source])
+                                     id, text, date, image_url, retweet_count, source])
             except UnicodeEncodeError:  # TODO: handle unicode OR just run with Python 3 :)
                 csv_writer.writerow(["ERROR"])
 
