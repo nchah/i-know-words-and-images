@@ -1,8 +1,8 @@
 # i-know-words-and-images
 
-## Workflow
-
 On February 28, 2016, the comedian John Oliver called upon viewers of Last Week Tonight to undermine Republican presidential primary candidate Donald Trump’s veneer of success, honesty, and affluence through the powers and peculiarities of social media: let the world know that Trump is not Trump but _Drumpf_, a man of failures, dishonesty, and violent chauvinism. A flood of social media activity followed: meme, word, image, hashtag, comment, retweet. 
+
+## Workflows
 
 Researching Meme Events
 
