@@ -99,9 +99,10 @@ def main(photo_file):
         labels = response['responses'][0]['labelAnnotations']
         for label in labels:
             # label = response['responses'][0]['labelAnnotations'][0]['description']
-            label = label['description']
-            print('Found label: %s' % label)
-            all_labels += label + ', '
+            label_val = label['description']
+            score = str(label['score'])
+            print('Found label: "%s" with score %s' % (label_val, score))
+            all_labels += label_val + ' @ ' + score + ', '
     except KeyError:
         print("N/A labels found")
 
@@ -111,9 +112,10 @@ def main(photo_file):
         texts = response['responses'][0]['textAnnotations']
         for text in texts:
             # text = response['responses'][0]['textAnnotations'][0]['description']
-            text = text['description']
-            print('Found text: %s' % text)
-            all_text += text + ', '
+            text_val = text['description']
+            score = str(text['score'])
+            print('Found text: "%s" with score %s' % (text_val, score))
+            all_text += text_val + ' @ ' + score + ', '
     except KeyError:
         print("N/A text found")
 

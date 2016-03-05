@@ -4,6 +4,8 @@
 
 
 
+
+
 ## Google Cloud Vision API
 
 ```
@@ -27,7 +29,7 @@ The [Google Cloud Vision API](https://cloud.google.com/vision/docs/) beta was re
 3. Run the script. You can have a folder of images you'd like to call the API on or use individual images.
 
 	```
-	$ python google-vision-api.py images
+	$ python google-vision-api.py images/
 	$ python google-vision-api.py dog.jpg
 	```
 
