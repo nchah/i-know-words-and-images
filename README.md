@@ -16,7 +16,7 @@ The toolkit in #iknowwordsandimages emerged out of response to this still unfold
 
 Researches could try to get at these questions through browsing Twitter, or through scanning their database manually—but they would quickly run into issues of speed, reliability, and coverage. The code shared here offers some tools for different kinds of workflows that a researcher might follow.
 
-## Sample Uses cases
+## Sample Use Cases
 
 1.  Examining a sub-set.
 
