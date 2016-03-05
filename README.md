@@ -135,3 +135,8 @@ It works as intended and correctly identifies the image as a dog. Extending the 
   ]
 }
 ```
+## Final Steps
+
+You may find the experience of researching Drumpf #disorienting, #disheartening, #tiring, or #overwhelming.
+
+Well, there's a .py for that: cleanse.py: see where this script takes you.
