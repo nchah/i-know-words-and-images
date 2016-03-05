@@ -19,14 +19,20 @@ timestamp = str(datetime.datetime.now())
 storage_file_name = timestamp + "-vision-api-output.json"
 
 
-def process_images(dir_name):
+def process_images(image_input):
     image_exts = ['.jpg', 'jpeg', '.png']
     ignore_files = ['.DS_Store']
-    for fn in os.listdir(dir_name + '/'):
-        ext = os.path.splitext(fn)
-        if fn not in ignore_files and ext[1] in image_exts and not os.path.isdir(fn):
-            print(fn)
-            main(dir_name + '/' + fn)
+
+    if not os.path.isdir(image_input):
+        print(image_input)
+        main(image_input)
+    else:
+        dir_name = image_input
+        for fn in os.listdir(dir_name + '/'):
+            ext = os.path.splitext(fn)
+            if fn not in ignore_files and ext[1] in image_exts and not os.path.isdir(fn):
+                print(fn)
+                main(dir_name + '/' + fn)
 
 
 def store_json(json_input):
@@ -50,21 +56,21 @@ def main(photo_file):
     with open(photo_file, 'rb') as image:
         image_content = base64.b64encode(image.read())
         service_request = service.images().annotate(
-              body={
-                'requests': [{
-                  'image': {
-                    'content': image_content
-                   },
-                  'features': [{
-                    'type': 'LABEL_DETECTION',
-                    'maxResults': 10,
-                   },
-                   {
-                    'type': 'TEXT_DETECTION',
-                    'maxResults': 10,
-                   }]
-                 }]
-              })
+                body={
+                    'requests': [{
+                        'image': {
+                            'content': image_content
+                        },
+                        'features': [{
+                            'type': 'LABEL_DETECTION',
+                            'maxResults': 10,
+                        },
+                            {
+                            'type': 'TEXT_DETECTION',
+                            'maxResults': 10,
+                            }]
+                    }]
+                })
     response = service_request.execute()
 
     try:
@@ -102,9 +108,8 @@ def main(photo_file):
 #     main(args.image_file)
 
 if __name__ == '__main__':
-    """ for batch processing of images in folder, otherwise use main()"""
     parser = argparse.ArgumentParser()
-    parser.add_argument('dir_name', help='The folder containing images you\'d like to query')
+    parser.add_argument('image_input', help='The folder containing images or the image you\'d like to query')
     args = parser.parse_args()
-    process_images(args.dir_name)
+    process_images(args.image_input)
 
