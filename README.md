@@ -34,11 +34,9 @@ Researches could try to get at these questions through browsing Twitter, or thro
 
 (g) Hydrate for full JSON Twitter metadata (see below).
 
-(g) Extract selected parameters into CSV, e.g., "text", "date", "retweet number", "ID", "source", and "description."
+(h) Extract selected parameters into CSV, e.g., "text", "date", "retweet number", "ID", "source", and "description."
 
-(f) Now you have options! Do ImagePlot mapped by time and similarity. Use Google Cloud Vision API to add further metadata to CSV. 
-
-(h) Run other analytics on the set.
+(i) Now you have options! Do ImagePlot mapped by time and similarity. Use Google Cloud Vision API to add further metadata to CSV. Run other analytics on the set.
 
 
 ## Google Cloud Vision API
