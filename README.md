@@ -40,6 +40,22 @@ Researchers could try to get at these questions through browsing Twitter, or thr
 
 Whatever research path you're following, you might want to also do an analysis of the whole set, which might be very large. The Google Cloud Vision API can return two datasets of interest: the text in the image (e.g., Make Donald Drumpf Again) and the entities in the image (e.g., hands, hat, hair, businessman, money). Researchers can look for patterns in these data. One possibility is comparing the words, themes, and images that John Oliver presents in the original broadcast with those that appeared during the meme event. How much apparent influence does the original "seeding" of the meme event have?
 
+
+## Samples
+
+![Similarity](results/meme_imageplot.txt---tweetid-vs-similarity.gif "Similarity")
+
+another imageplot starting with the 4th most tweeted image, then comparing similarity with out sample of ~1000
+
+![Similarity](results/podium_imageplot.txt---tweet_id-vs-similarity.gif "Similarity")
+
+did a test plot of tweetid (time?) along x axis by similarity (y-axis) for the podium set. top image was the one constantly retweeted.
+
+![Transcript Wordcloud](results/transcript.png "Transcript Wordcloud")
+![Labels Wordcloud](results/visionapi-labels.png "Labels Wordcloud")
+![OCR Wordcloud](results/visionapi-ocr.png "OCR Wordcloud")
+
+
 ## Google Cloud Vision API
 
 ```
