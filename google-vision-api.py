@@ -113,9 +113,8 @@ def main(photo_file):
         for text in texts:
             # text = response['responses'][0]['textAnnotations'][0]['description']
             text_val = text['description']
-            score = str(text['score'])
-            print('Found text: "%s" with score %s' % (text_val, score))
-            all_text += text_val.encode('utf-8') + ' @ ' + score + ', '
+            print('Found text: "%s"' % text_val)
+            all_text += text_val.encode('utf-8') + ', '
     except KeyError:
         print("N/A text found")
 
