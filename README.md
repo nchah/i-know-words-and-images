@@ -44,3 +44,41 @@ The [Google Cloud Vision API](https://cloud.google.com/vision/docs/) beta was re
 	SAFE_SEARCH_DETECTION	Determine image safe search properties on the image
 	IMAGE_PROPERTIES	Compute a set of properties about the image (such as the image's dominant colors)
 	```
+
+### Samples
+
+The "Getting Started" tutorial provides a dog.jpg image to run in the first API call. 
+
+![dog.jpg](/images/dog.jpg?raw=true)
+
+It works as intended and correctly identifies the image as a dog. Extending the maxResults returns even more results as follows.
+```
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/0bt9lr",
+          "description": "dog",
+          "score": 0.89208293
+        },
+        {
+           "score": 0.85700572, 
+           "mid": "/m/09686", 
+           "description": "vertebrate"
+        }, 
+        {
+           "score": 0.84881896, 
+           "mid": "/m/01pm38", 
+           "description": "clumber spaniel"
+        }, 
+        {
+           "score": 0.84757507, 
+           "mid": "/m/04rky", 
+           "description": "mammal"
+        }
+      ]
+    }
+  ]
+}
+```
