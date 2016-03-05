@@ -2,7 +2,7 @@
 
 On February 28, 2016, the comedian John Oliver called upon viewers of Last Week Tonight to undermine Republican presidential primary candidate Donald Trump’s veneer of success, honesty, and affluence through the powers and peculiarities of social media: let the world know that Trump is not Trump but _Drumpf_, a man of failures, dishonesty, and violent chauvinism. A flood of social media activity followed: meme, word, image, hashtag, comment, retweet. 
 
-A Web Archives Hackathon at the University of Toronto happened to coincide with this Drumpfing of Trump. Drumpf famously declared "I love words. I have the best words." We set off a set of (#nottiny)-hands-on inquiries into what investigating Twitter through not just words but words _and_ images might look like: what people say, how they make/re-make images words, how computers classify images. 
+A Web Archives Hackathon at the University of Toronto happened to coincide with this Drumpfing of Trump. Drumpf famously declared "I love words. I have the best words." We set off a set of hands-on inquiries into what investigating Twitter through not just words but words _and_ images might look like: what people say, how they make/re-make images words, how computers classify images. 
 
 ## Workflows
 
@@ -26,19 +26,17 @@ Researches could try to get at these questions through browsing Twitter, or thro
 
 (b) A specific theme emerges across different images: for example, the various ways of comparing Donald Trump to Hitler.
 
-(c) The researcher gathers unique Image IDs.
+(c) The researcher gathers unique Image IDs. Because of the way Twitter identifies and links to images, its important to check if additional copies of the image appear under different file names.
 
-(d) Researcher can do a couple things at this stage: using ImageHash and PhotoHash, find similar images in the database. This process also returns the hamming distance. 
+(d) Researcher uses ImageHash and PhotoHash to find similar images in the database. This process also returns the hamming distance. Results that return 0 are identical copies of the same image. Results above 0 have variation, so might need to be inspected. 
 
-(e) Do analysis on images and add to list those of similarity at a researcher-determined level of confidence.
+(e) Get the all Tweet IDs associated with image database using python script. 
 
-(f) Get the all Tweet IDs associated with images. 
+(f) Using Twarc, hydrate for full JSON Twitter metadata.
 
-(g) Hydrate for full JSON Twitter metadata (see below).
+(g) Extract selected parameters into CSV, e.g., "text", "date", "retweet number", "ID", "source", and "description."
 
-(h) Extract selected parameters into CSV, e.g., "text", "date", "retweet number", "ID", "source", and "description."
-
-(i) Now you have options! Do ImagePlot mapped by time and similarity. Use Google Cloud Vision API to add further metadata to CSV. Run other analytics on the set. Or bravely go forth and scan the data on your own!
+(h) Now you have options! Do ImagePlot mapped by time and similarity. Use Google Cloud Vision API to add further metadata to CSV (see below). Run other analytics on the set. Or bravely go forth and scan the data on your own!
 
 
 ## Google Cloud Vision API
