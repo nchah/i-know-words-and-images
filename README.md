@@ -2,7 +2,7 @@
 
 On February 28, 2016, the comedian John Oliver called upon viewers of Last Week Tonight (https://youtu.be/DnpO_RTSNmQ) to undermine Republican presidential primary candidate Donald Trump’s veneer of success, honesty, and affluence through the powers and peculiarities of social media: let the world know that Trump is not Trump but _Drumpf_, a man of failures, dishonesty, and violent chauvinism. A flood of social media activity followed: meme, word, image, hashtag, comment, retweet. 
 
-A Web Archives Hackathon at the University of Toronto happened to coincide with this Drumpfing of Trump. Drumpf famously declared "I love words. I have the best words." We set off on a hands-on inquiry into what investigating Twitter through not just words but words _and_ images might look like: what people say, how they use/modify each other's images and words, how computers read text and classify images, and so on. 
+A Web Archives Hackathon at the University of Toronto (http://www.archivesunleashed.ca) happened to coincide with this Drumpfing of Trump. Drumpf famously declared "I love words. I have the best words." We set off on a hands-on inquiry into what investigating Twitter through not just words but words _and_ images might look like: what people say, how they use/modify each other's images and words, how computers read text and classify images, and so on. 
 
 ## Researching Meme Events
 
@@ -43,10 +43,10 @@ Whatever research path you're following, you might want to also do an analysis o
 
 ## Sample Analysis
 
-an imageplot starting with the 4th most tweeted image, then comparing similarity with out sample of ~1000
+Using ImagePlot (http://lab.softwarestudies.com/p/imageplot.html) we visually analyze the 4th most tweeted image and related images, taken from a sample of ~1000.  Time (tweetid as consecutive #s) is represented on the X-axis, and similarity scores (calculated by photohash) along the Y-axis.
 ![Similarity](results/meme_imageplot.txt---tweetid-vs-similarity.gif "Similarity")
 
-did a test plot of tweetid (time?) along x axis by similarity (y-axis) for the podium set. top image was the one constantly retweeted.
+Another plot of time along X-axis by similarity for another set of photos, selected based on an original photo of Drumpf at a podium. Discovery of the top photo more popularly retweeted over time.
 ![Similarity](results/podium_imageplot.txt---tweet_id-vs-similarity.gif "Similarity")
 
 Transcript Wordcloud
