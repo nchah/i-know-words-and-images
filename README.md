@@ -6,7 +6,7 @@ A Web Archives Hackathon at the University of Toronto (http://www.archivesunleas
 
 ## Researching Meme Events
 
-The toolkit in #iknowwordsandimages emerged out of response to this still unfolding meme event—a social experiment and #politicalintervention by a comedy show. We drew on a data set of tweets and associated images connected by the hashtag that Oliver had put forward, #MakeDonaldDrumpfAgain (c/o the awesome Nick Ruest @ruebot). The team assumed researchers in a variety of fields would find much to study in this meme event and others like it. Here are some of the questions we thought researchers might ask:
+The toolkit in #iknowwordsandimages emerged out of response to this still unfolding meme event—a social experiment and #politicalintervention by a comedy show. We drew on a data set of tweets and associated images connected by the hashtag that Oliver had put forward, [#MakeDonaldDrumpfAgain](https://dataverse.scholarsportal.info/dataset.xhtml?persistentId=hdl:10864/11491) (c/o the awesome Nick Ruest @ruebot). The team assumed researchers in a variety of fields would find much to study in this meme event and others like it. Here are some of the questions we thought researchers might ask:
 
 - How did John Oliver’s original broadcast influence the kinds of themes that meme participants pursued in their contributions?
 
